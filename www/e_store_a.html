@@ -8,89 +8,35 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!--script src="js/jquery-1.9.1.js"></script-->
         <script src="js/main.js"></script>
+        <script src="js/e_store_a.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
+
         <div class="page-header margin-none">
             <h1 class="margin-left-sm">E@Store <small>Best of the best</small></h1>
-            <a class="btn btn-primary btn-sm" href="#" role="button">Login</a>
+            <a class="btn btn-primary btn-sm" id='login-btn' href="#" role="button">Login</a>
         </div>
 
-        <div class="e-store-a-content">
+        <div class="controls">
 
-            <div class="spacing-sm"></div>
-
-            <div class="container-fluid">
-
-                <div class="row">
-                    <div class="col-sm-6 col-xs-8 col-min-ten-vh">
-                        <div class="input-group"> 
-                            <input class="form-control" placeholder="Search for...">
-                            <span class="input-group-btn"> 
-                                <button class="btn btn-default" type="button">Go!</button>
-                            </span> 
-                        </div>
-                    </div>
-
-                    <div class="col-sm-offset-4 col-sm-2 col-xs-4 col-min-ten-vh padding-none">
-
-                        <button type="button" class="btn btn-default btn-sm">
-                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Check-out
-                        </button>
-
-                    </div>
-                </div>
-
+            <div class="input-group"> 
+                <input class="form-control" placeholder="Search for...">
+                <span class="input-group-btn"> 
+                    <button class="btn btn-default" type="button">Go!</button>
+                </span> 
             </div>
 
-            <div class="spacing-sm"></div>
-
-            <div class="container">
-                <div class="row min-height-content">
-
-                    <div class="col-sm-4">
-                        sidebar
-                    </div>
-
-                    <div class="col-sm-8">
-
-                        <div class="row third-percent">
-                            <div class="col-sm-12">
-                                whole
-                            </div>
-                        </div>
-
-                        <div class="row third-percent">
-                            <div class="col-sm-6">
-                                half
-                            </div>
-
-                            <div class="col-sm-6">
-                                half
-                            </div>
-                        </div>
-
-                        <div class="row third-percent">
-                            <div class="col-sm-4">
-                                third
-                            </div>
-
-                            <div class="col-sm-4">
-                                third
-                            </div>
-
-                            <div class="col-sm-4">
-                                third
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
+            <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Check-out
+            </button>
 
         </div>
-        
+
+        <div class="e-store-a-content" id='e-store-a-content'>
+
+        </div>
+
         <div class="spacing-sm"></div>
 
         <footer class="footer footer-height-sm">
