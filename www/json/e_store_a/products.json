@@ -1,0 +1,14 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "title": "Sony Xperia E2003",
+            "descr": "This is article one",
+            "price": "159",
+            "stock": "43",
+            "manufacturer": "Sony Inc.",
+            "image": "images/laboratory.png"
+        }
+       
+    ]
+}

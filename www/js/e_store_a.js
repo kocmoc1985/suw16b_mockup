@@ -14,7 +14,14 @@ function getImagesSpecialOfferArray() {
     return sideBarArr;
 }
 
+function getProductsArray() {
+    var products = getJsonFromUrlSync("json/e_store_a/products.json");
+    return products.products;
+}
+
 function go() {
+
+    includeHtml("templates/estore_a/controls.html", "#controls");
 
     includeHtml("templates/estore_a/initial.html", "#e-store-a-content");
 
@@ -25,13 +32,40 @@ function go() {
     sideBarLinkCliked();
 
     buildSpecialOffers(getImagesSpecialOfferArray());
+
+    specialOfferClicked();
 }
 
-//function loadSpecialOffers() {
-////    sameHightAsParent("#special-offers");
-//    includeHtml("templates/estore_a/specialof.html", "#special-offers");
-//    $("#carousel-example-generic").height("400px");
-//}
+function findProduct(productsArr, productId) {
+    //
+    for (var i = 0; productsArr.length; i++) {
+        var curr = productsArr[i];
+        if (curr.id === ""+productId) {
+            return curr;
+        }
+    }
+    //
+    return null;
+}
+
+function openProductPage(productsArr, productId) {
+    //
+    $("#content-col").empty();
+    //
+    var product = findProduct(productsArr,productId);
+    //
+    var productObj = $(loadHtml("templates/estore_a/productPage.html"));
+    //
+    $(productObj).find(".product-title").text(product.title);
+    //
+    $("#content-col").append(productObj);
+}
+
+function specialOfferClicked() {
+    $("#special-offers .item").click(function () {
+        openProductPage(getProductsArray(), 1);
+    });
+}
 
 function buildSpecialOffers(imagesArr) {
     //
