@@ -80,8 +80,6 @@ function buildSpecialOffers(imagesArr) {
         $(imgTemplateObj).find("img").attr("src", imagesArr[i]);
         $(imgTemplateObj).find("img").attr("alt", imagesArr[i]);
         //
-
-        //
         $(carouselTemplateObj).find("#carousel-images").append(imgTemplateObj);
     }
     //
